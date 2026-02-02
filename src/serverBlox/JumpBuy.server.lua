@@ -11,6 +11,7 @@ local function giveUpgrade(player)
 	if playerGold.Value >= upgradeCost then
 		humanoid.UseJumpPower = true
 		humanoid.JumpPower = 150
+        player.leaderstats.Coins.Value = playerGold.Value - upgradeCost
 	end
 end
 

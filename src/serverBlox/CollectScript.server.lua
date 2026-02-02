@@ -3,13 +3,21 @@ local coin = script.Parent -- Path to coin
 
 local used = false
 
+task.spawn(function()
+	while true do
+		coin.CFrame = coin.CFrame * CFrame.fromEulerAnglesXYZ(0, math.rad(5), 0)
+		task.wait()
+	end
+end)
+
+
 function giveCoin(part)
 	if part.Parent:FindFirstChild("Humanoid") == nil or used == true then
 		return
 	end
 	used = true
 	local player = player:GetPlayerFromCharacter(part.Parent)
-	player.leaderstats.Money.Value = player.leaderstats.Money.Value + 1
+	player.leaderstats.Coins.Value = player.leaderstats.Coins.Value + 1
 
 	coin.Transparency = 1
 	coin.Decal.Transparency = 1
