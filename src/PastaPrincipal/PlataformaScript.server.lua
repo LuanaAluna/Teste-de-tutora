@@ -9,7 +9,7 @@ local info = TweenInfo.new(
 	true
 )
 
-local objetivo = {Position = Vector3.new(-1030.306, 73.1, 188.416)} -- Posição da Ilha B
+local objetivo = {Position = Vector3.new(-1030.306, 73.1, 188.416)} 
 
 local movimento = TweenService:Create(plataforma, info, objetivo)
 
